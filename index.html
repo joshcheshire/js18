@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app = "myApp" lang "en">
+<head>
+<meta charset = "utf 8">
+<title> JS 18</title>
+
+<link rel = "stylesheet" type="text/css" href="main.css">
+<script src="angular.min.js"> </script>  
+	
+
+</head>
+
+<body>
+
+	<div ng-controller = "mainController">
+		
+	<div class="main-container">
+
+		<h1 class = "header"> "Quote Me On That"</h1>
+			
+
+		<div class = "quote-box">
+			<input type ="text" class = "quote-input" value = "Enter your quote here"> 
+				</div>
+
+		<div class ="author-box">
+			<input type = "text" class ="author-input" value = " Enter Author's name here">
+
+				</div>
+		<button ng-click="clickSubmit($event)" class="submit-button">Submit Quote</button>
+			</div>
+	</div>
+	
+	<script src = "main.js"> </script>
+	</body>
+
+	</html>
+
