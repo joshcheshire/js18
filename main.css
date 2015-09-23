@@ -10,6 +10,7 @@
 
 .header{
 	margin-left:40vw;
+	font-family: fantasy;
 }
 
 .quote-box{
@@ -43,7 +44,17 @@
 	border-color: black
 }
 
-.jim{
+.quoteOutput{
 
-
+	font-family: copperplate;
+	font-size: 20px;
+	margin-left:46vw;
+	margin-top: 5vw;
 }
+
+/*.jim{
+
+	width:75%;
+	height: 75%;
+	opacity: 0.3;
+}*/

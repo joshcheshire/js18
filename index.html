@@ -15,17 +15,17 @@
 	<div ng-controller = "mainController">
 		
 	<div class="main-container">
-
-
 		<h1 class = "header"> "Quote Me On That"</h1>
-<!-- 			<img class="jim" src = "https://blondehurst.files.wordpress.com/2015/06/typing.gif"
+
+<!-- 	<img class = "jim"src = "https://blondehurst.files.wordpress.com/2015/06/typing.gif"
  -->
+ 
 		<div class = "quote-box">
 			<input ng-model= "newScript.quote" type ="text" class = "quote-input" placeholder = "Enter your quote here"> 
 				</div>
 
 		<div class ="author-box">
-			<input ng-model= "newScript.author" type = "text" class ="author-input" placeholder = " Enter Author's name here">
+				<input ng-model= "newScript.author" type = "text" class ="author-input" placeholder = " Enter Author's name here">
 
 				</div>
 		<button ng-click="clickSubmit($event)" class="submit-button"><em>Submit Quote</em></button>
@@ -33,11 +33,25 @@
 	
 			<div class = "submittedContainer "> </div>
 				<ul>
-					<li ng-repeat="script in quotes"> {{script.quote}} <br> Author: {{script.author}}</li>
+					<li class= "quoteOutput" ng-repeat="script in quotes"> "{{script.quote}}" <br>  <em>Author:</em> {{script.author}}
+						<div class = "rating">
+						<p> Rate This Quote: {{script.rating}}</p>
+						<select name = " Rate this Quote" ng-model="script.rating" > Rate this Quote
+							<option value = "1" >1 Star</option>
+							<option value = "2" >2 Stars</option>
+							<option value = "3" >3 Stars</option>
+							<option value = "4" >4 Stars</option>
+							<option value = "5" >5 Stars</option>
+							</select>
+						</div>
+					</li>
+				</ul>
+			</div>
+				
 
-	</div>
 	
-	<script src = "main.js"> </script>
+	
+			<script src = "main.js"> </script>
 	</body>
 
 	</html>

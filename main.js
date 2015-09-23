@@ -5,13 +5,17 @@ var mainControllerFunc = function($scope){
 
 		quote: '',
 		author: '',
+		rating:[]
 	}
-
 
 
 $scope.quotes = []
 
 
+$scope.sortRating = function(){
+
+	
+}
 
 
 $scope.clickSubmit = function(event){
@@ -21,9 +25,6 @@ if ($scope.newScript.quote != '' && $scope.newScript.author != ''){
 	$scope.quotes.push($scope.newScript);
 	$scope.newScript = ''
 }
-
-
-
 	console.log('Clicked it!')
 
 }
@@ -36,8 +37,3 @@ if ($scope.newScript.quote != '' && $scope.newScript.author != ''){
 angular.module('myApp').controller('mainController' , ['$scope', mainControllerFunc])
 
 
-//maybe add an ng-hide from the text boxes on click
-
-// on click submit, alert if not correct;
-
-//
