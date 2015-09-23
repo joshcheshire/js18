@@ -1,18 +1,26 @@
 angular.module ('myApp', [])
 var mainControllerFunc = function($scope){
 
+	$scope.newScript = {
+
+		quote: '',
+		author: '',
+	}
 
 
 
-
-
+$scope.quotes = []
 
 
 
 
 $scope.clickSubmit = function(event){
 	
+if ($scope.newScript.quote != '' && $scope.newScript.author != ''){
 
+	$scope.quotes.push($scope.newScript);
+	$scope.newScript = ''
+}
 
 
 

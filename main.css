@@ -29,4 +29,21 @@
 	height: 4vw;
 	border-radius: 5px;
 	width:8vw;
+	background-color: #2C3E50;
+}
+
+.quote-input{
+
+	border-color: black;
+
+}
+
+.author-input{
+
+	border-color: black
+}
+
+.jim{
+
+
 }

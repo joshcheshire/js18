@@ -16,19 +16,25 @@
 		
 	<div class="main-container">
 
-		<h1 class = "header"> "Quote Me On That"</h1>
-			
 
+		<h1 class = "header"> "Quote Me On That"</h1>
+<!-- 			<img class="jim" src = "https://blondehurst.files.wordpress.com/2015/06/typing.gif"
+ -->
 		<div class = "quote-box">
-			<input type ="text" class = "quote-input" value = "Enter your quote here"> 
+			<input ng-model= "newScript.quote" type ="text" class = "quote-input" placeholder = "Enter your quote here"> 
 				</div>
 
 		<div class ="author-box">
-			<input type = "text" class ="author-input" value = " Enter Author's name here">
+			<input ng-model= "newScript.author" type = "text" class ="author-input" placeholder = " Enter Author's name here">
 
 				</div>
-		<button ng-click="clickSubmit($event)" class="submit-button">Submit Quote</button>
-			</div>
+		<button ng-click="clickSubmit($event)" class="submit-button"><em>Submit Quote</em></button>
+				</div>
+	
+			<div class = "submittedContainer "> </div>
+				<ul>
+					<li ng-repeat="script in quotes"> {{script.quote}} <br> Author: {{script.author}}</li>
+
 	</div>
 	
 	<script src = "main.js"> </script>
