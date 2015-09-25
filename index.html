@@ -17,23 +17,32 @@
 	<div class="main-container">
 		<h1 class = "header"> "Quote Me On That"</h1>
 
-<!-- 	<img class = "jim"src = "https://blondehurst.files.wordpress.com/2015/06/typing.gif"
- -->
+
  
 		<div class = "quote-box">
-			<input ng-model= "newScript.quote" type ="text" class = "quote-input" placeholder = "Enter your quote here"> 
-				</div>
+			<input ng-model= "newScript.quote" type ="text" class = "quote-	input" placeholder = "Enter your quote here"> 
+		</div>
 
 		<div class ="author-box">
 				<input ng-model= "newScript.author" type = "text" class ="author-input" placeholder = " Enter Author's name here">
 
-				</div>
+		</div>
+		
+
 		<button ng-click="clickSubmit($event)" class="submit-button"><em>Submit Quote</em></button>
 				</div>
+		
+
+		<button  ng-click = "getRandomQuote($event)" class= "random quote" > Random Quote </button>
+				
+				<div class= "popup" ng-show = "showPopup">"{{randomQuote.quote}}"<br> <em>{{randomQuote.author}}<em>
+						
+				</div>
+					
 	
 			<div class = "submittedContainer "> </div>
 				<ul>
-					<li class= "quoteOutput" ng-repeat="script in quotes"> "{{script.quote}}" <br>  <em>Author:</em> {{script.author}}
+					<li class= "quoteOutput" ng-repeat="script in quotes| orderBy:'rating': reverse"> "{{script.quote}}" <br>  <em>Author:</em> {{script.author}}
 						<div class = "rating">
 						<p> Rate This Quote: {{script.rating}}</p>
 						<select name = " Rate this Quote" ng-model="script.rating" > Rate this Quote
